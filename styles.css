@@ -214,17 +214,28 @@ nav {
     filter: brightness(0) saturate(100%) invert(88%) sepia(19%) saturate(1095%) hue-rotate(113deg) brightness(97%) contrast(88%);
 }
 
-/* Hamburger */
+/* Mobile social cluster lives inside the toggle overlay; hidden on desktop. */
+.nav-links-social { display: none; }
+
+/* Dedicated close button inside the overlay; hidden on desktop. */
+.nav-links-close { display: none; }
+
+/* Hamburger
+   44x44 hit target with the visual 24x18 lines centered via padding.
+   order:99 pushes the button past .nav-icons in the flex flow so it
+   lands on the far right whenever it's visible. */
 .menu-toggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 24px;
-    height: 18px;
+    width: 44px;
+    height: 44px;
+    padding: 13px 10px;
     background: none;
     border: none;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    padding: 0;
+    order: 99;
 }
 
 .menu-toggle span {
@@ -245,15 +256,21 @@ nav {
     .menu-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .menu-toggle.active span:last-child { transform: translateY(-8px) rotate(-45deg); }
 
+    /* Toggle owns navigation on mobile; nav bar reduces to logo + hamburger. */
+    .nav-icons { display: none; }
+
     .nav-links {
         position: fixed;
-        inset: 0;
-        background: rgba(9, 14, 10, 0.97);
-        backdrop-filter: blur(28px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        background: var(--background-color);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
         transform: translateX(-100%);
         transition: transform 0.4s var(--ease-out);
         z-index: 999;
@@ -261,13 +278,81 @@ nav {
         pointer-events: none;
     }
     .nav-links.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        background: var(--background-color);
         transform: translateX(0);
         visibility: visible;
         pointer-events: auto;
     }
     .nav-links a { font-size: 1.25rem; padding: 0.5rem 1rem; }
-    .nav-icons { gap: 0.25rem; }
-    .nav-icons .icon { width: 2rem; height: 2rem; }
+
+    .nav-links-close {
+        position: absolute;
+        top: 0.625rem;
+        right: var(--gutter-x);
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        background: none;
+        border: none;
+        border-radius: var(--radius-sm);
+        color: var(--ink-70);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        transition: color 0.2s var(--ease-out), background 0.2s var(--ease-out);
+    }
+    .nav-links-close:hover { color: var(--ink-100); background: var(--ink-06); }
+    .nav-links-close .iglyph { font-size: 1.5rem; }
+
+    .nav-links-social {
+        display: flex;
+        gap: 0.625rem;
+        margin-top: 1.25rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--ink-12);
+        width: min(280px, 70%);
+        justify-content: center;
+    }
+    .nav-links-social .icon {
+        color: var(--ink-70);
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--ink-12);
+        transition: color 0.2s var(--ease-out), background 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+    }
+    .nav-links-social .icon:hover {
+        color: var(--primary-color);
+        background: var(--mint-faint);
+        border-color: transparent;
+    }
+    .nav-links-social .dex-icon {
+        width: 1rem;
+        height: 1rem;
+        filter: brightness(0) invert(0.78);
+        transition: filter 0.2s var(--ease-out);
+    }
+    .nav-links-social .icon:hover .dex-icon {
+        filter: brightness(0) saturate(100%) invert(88%) sepia(19%) saturate(1095%) hue-rotate(113deg) brightness(97%) contrast(88%);
+    }
+}
+
+@media (max-width: 480px) {
+    nav { padding: 0.625rem var(--gutter-x); }
+    .logo img { height: 1.7rem; }
 }
 
 body.menu-open { overflow: hidden; }
@@ -479,24 +564,25 @@ body.menu-open { overflow: hidden; }
 
 .hero-contract-value {
     color: var(--ink-55);
-    word-break: break-all;
+    overflow-wrap: anywhere;
+    min-width: 0;
 }
 
 @media (max-width: 860px) {
-    .hero { padding: 7rem var(--gutter-x) 4rem; min-height: auto; }
+    .hero { padding: 7rem var(--gutter-x) 4rem; }
     .hero h1 { max-width: 100%; }
     .hero p { max-width: 100%; }
     .cta-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        align-items: center;
         gap: 0.625rem;
         margin-bottom: 3rem;
+        flex-wrap: wrap;
     }
     .primary-btn, .secondary-btn {
-        width: 100%;
-        max-width: 380px;
-        padding: 1rem;
+        padding: 0.875rem 1.25rem;
         text-align: center;
+        white-space: nowrap;
     }
     .hero-metrics {
         grid-template-columns: repeat(2, 1fr);
@@ -505,6 +591,14 @@ body.menu-open { overflow: hidden; }
         max-width: 100%;
     }
     .hero-contract { flex-wrap: wrap; row-gap: 0.25rem; }
+}
+
+@media (max-width: 480px) {
+    .hero { padding: 6rem var(--gutter-x) 3rem; }
+    .hero-eyebrow { margin-bottom: 1.25rem; }
+    .hero-metrics { column-gap: 1rem; row-gap: 0.875rem; margin-bottom: 1rem; }
+    .hero-metric-value { font-size: 1rem; }
+    .hero-contract-value { font-size: 0.6875rem; line-height: 1.5; }
 }
 
 /* =================================================================
@@ -2756,6 +2850,8 @@ section { position: relative; }
 .nav-links a:focus-visible,
 .nav-icons .icon:focus-visible,
 .footer-social .icon:focus-visible,
+.menu-toggle:focus-visible,
+.nav-links-close:focus-visible,
 .primary-btn:focus-visible,
 .secondary-btn:focus-visible,
 .token-resources-links a:focus-visible {
@@ -4008,6 +4104,10 @@ section { position: relative; }
 
 /* Responsive */
 @media (max-width: 1120px) {
+    /* Frame was a fixed 900px on desktop; below this width the stacked grid
+       overflows that ceiling and gets clipped by overflow:hidden. Let it grow. */
+    .status-dashboard-frame { height: auto; }
+    .status-dashboard { max-height: none; }
     .dash-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: repeat(5, auto);
@@ -4056,6 +4156,24 @@ section { position: relative; }
     .dash-card--chart,
     .dash-card--jobs { grid-column: 1; }
     .dash-toolbar .dash-pill { display: none; }
+
+    /* Aggressive mobile trim — the dashboard's job here is a representative
+       snapshot, not a full console. Keep rail + one KPI + chart + a few jobs;
+       drop the cards whose legibility or density doesn't survive the column. */
+    .dash-grid .dash-kpi ~ .dash-kpi,
+    .dash-card--list,
+    .dash-card--health,
+    .dash-card--donut,
+    .dash-toolbar { display: none; }
+
+    /* Keep the jobs list short on mobile */
+    .dash-jobs > li:nth-child(n+4) { display: none; }
+}
+
+/* Smallest phones: tighten the residual dashboard chrome. */
+@media (max-width: 420px) {
+    .dash-rail { padding: 8px 10px; gap: 8px; }
+    .dash-nav li { width: 28px; height: 28px; }
 }
 
 /* =================================================================

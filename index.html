@@ -27,11 +27,28 @@
                 <span></span>
             </button>
             <div class="nav-links">
+                <button class="nav-links-close" aria-label="Close menu" type="button">
+                    <svg class="iglyph" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.225 4.811a1 1 0 0 0-1.414 1.414L10.586 12 4.811 17.775a1 1 0 1 0 1.414 1.414L12 13.414l5.775 5.775a1 1 0 0 0 1.414-1.414L13.414 12l5.775-5.775a1 1 0 0 0-1.414-1.414L12 10.586z"/></svg>
+                </button>
                 <a href="#network">Network</a>
                 <a href="#flow">Flow</a>
                 <a href="#features">Features</a>
                 <a href="#token">Token</a>
                 <a href="#network-status">Status</a>
+                <div class="nav-links-social" aria-label="Social and markets">
+                    <a href="https://x.com/SoPU_SOL" target="_blank" rel="noopener noreferrer" class="icon" title="X">
+                        <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 102.4 464H31.9l164.1-184.6L11 48H156.6l100.5 132.9L389.2 48zM364.4 421.8h39.1L137.5 88H95.2L364.4 421.8z"/></svg>
+                    </a>
+                    <a href="https://t.me/Solara_Processing_Unit" target="_blank" rel="noopener noreferrer" class="icon" title="Telegram">
+                        <svg class="iglyph" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm115 169c-4 39-20 134-28 178-3 19-10 25-17 25-14 1-25-10-39-19-22-15-36-23-58-37-25-17-9-27 5-42 4-4 67-62 68-67 0-1 0-3-1-4-2-2-4-1-5-1-2 1-37 23-105 69-10 7-19 10-27 10-9 0-26-5-38-9-16-5-28-8-27-16 1-5 7-9 18-14 73-32 121-53 145-62 69-29 83-34 92-34 2 0 7 0 10 3 2 2 3 5 4 7 0 1 1 5 0 8z"/></svg>
+                    </a>
+                    <a href="https://www.dextools.io/app/en/solana/pair-explorer/24tYhFurtSsgBNSBgxWynYWRUbrxw6acGhmLPKS9UD78?t=1750036596345" target="_blank" rel="noopener noreferrer" class="icon" title="DEXTools">
+                        <img src="assets/dextools.svg" alt="DEXTools" class="dex-icon">
+                    </a>
+                    <a href="https://dexscreener.com/solana/24tYhFurtSsgBNSBgxWynYWRUbrxw6acGhmLPKS9UD78" target="_blank" rel="noopener noreferrer" class="icon" title="DEX Screener">
+                        <img src="assets/dex-screener-seeklogo.svg" alt="DEX Screener" class="dex-icon">
+                    </a>
+                </div>
             </div>
             <div class="nav-icons">
                 <a href="https://x.com/SoPU_SOL" target="_blank" rel="noopener noreferrer" class="icon" title="Twitter">
@@ -961,6 +978,16 @@
                 document.body.classList.remove('menu-open');
             });
         });
+
+        // Dedicated close button inside the overlay menu
+        const navLinksClose = document.querySelector('.nav-links-close');
+        if (navLinksClose) {
+            navLinksClose.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        }
 
         // Scroll reveal — fade + small rise once each element enters view.
         // Gated by html.js in CSS, so non-JS visitors get content visible by default.
