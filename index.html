@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solara Processing Unit</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/hd.png" alt="Solara Processing Unit">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#network">Network</a>
+                <a href="#flow">Flow</a>
+                <a href="#features">Features</a>
+                <a href="#token">Token</a>
+                <a href="#network-status">Status</a>
+            </div>
+            <div class="nav-icons">
+                <a href="https://x.com/SoPU_SOL" target="_blank" rel="noopener noreferrer" class="icon" title="Twitter">
+                    <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 102.4 464H31.9l164.1-184.6L11 48H156.6l100.5 132.9L389.2 48zM364.4 421.8h39.1L137.5 88H95.2L364.4 421.8z"/></svg>
+                </a>
+                <a href="https://t.me/Solara_Processing_Unit" target="_blank" rel="noopener noreferrer" class="icon" title="Telegram">
+                    <svg class="iglyph" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm115 169c-4 39-20 134-28 178-3 19-10 25-17 25-14 1-25-10-39-19-22-15-36-23-58-37-25-17-9-27 5-42 4-4 67-62 68-67 0-1 0-3-1-4-2-2-4-1-5-1-2 1-37 23-105 69-10 7-19 10-27 10-9 0-26-5-38-9-16-5-28-8-27-16 1-5 7-9 18-14 73-32 121-53 145-62 69-29 83-34 92-34 2 0 7 0 10 3 2 2 3 5 4 7 0 1 1 5 0 8z"/></svg>
+                </a>
+                <a href="https://www.dextools.io/app/en/solana/pair-explorer/24tYhFurtSsgBNSBgxWynYWRUbrxw6acGhmLPKS9UD78?t=1750036596345" target="_blank" rel="noopener noreferrer" class="icon" title="DEXTools">
+                    <img src="assets/dextools.svg" alt="DEXTools" class="dex-icon">
+                </a>
+                <a href="https://dexscreener.com/solana/24tYhFurtSsgBNSBgxWynYWRUbrxw6acGhmLPKS9UD78" target="_blank" rel="noopener noreferrer" class="icon" title="DEX Screener">
+                    <img src="assets/dex-screener-seeklogo.svg" alt="DEX Screener" class="dex-icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-label="Hero">
+        <div class="hero-video-container" aria-hidden="true">
+            <video autoplay muted loop playsinline preload="metadata" class="hero-video"
+                poster="data:image/svg+xml,%3Csvg viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='g' cx='40%25' cy='60%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%2316302a'/%3E%3Cstop offset='100%25' stop-color='%23090e0a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='16' height='9' fill='url(%23g)'/%3E%3C/svg%3E">
+                <source src="assets/bg.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-eyebrow"><span class="dot"></span>Solana &middot; GPU compute marketplace</div>
+            <h1>
+                <span>GPU compute,<br>settled on-chain.</span>
+            </h1>
+            <p>A two-sided marketplace where idle GPUs earn $SoPU, and AI builders rent compute by the hour &mdash; on Solana.</p>
+            <div class="cta-buttons">
+                <button class="primary-btn">Launch app</button>
+                <button class="secondary-btn">Buy $SoPU</button>
+            </div>
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <span class="hero-metric-label">$SoPU</span>
+                    <span class="hero-metric-value">$0.0084</span>
+                </div>
+                <div class="hero-metric">
+                    <span class="hero-metric-label">TVS</span>
+                    <span class="hero-metric-value">$2.4M</span>
+                </div>
+                <div class="hero-metric">
+                    <span class="hero-metric-label">Nodes</span>
+                    <span class="hero-metric-value">1,287</span>
+                </div>
+                <div class="hero-metric">
+                    <span class="hero-metric-label">Holders</span>
+                    <span class="hero-metric-value">8,432</span>
+                </div>
+            </div>
+            <div class="hero-contract">
+                <span class="hero-contract-label">Contract</span>
+                <span class="hero-contract-value">7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network section -->
+    <section class="features" id="network">
+        <div class="features-content">
+            <div class="section-header" data-reveal>
+                <div class="section-index">02 &middot; Network</div>
+                <h2><span>Two sides. One network.</span></h2>
+            </div>
+
+            <div class="features-grid" data-reveal-stagger>
+                <article class="network-panel" data-reveal>
+                    <div class="panel-eyebrow">Supply</div>
+                    <div class="node-card" data-ambient>
+                        <div class="node-card-status">
+                            <div class="node-card-meta">sopu-04a2 &middot; us-west-1</div>
+                        </div>
+                        <div class="node-card-title">
+                            <div class="title-icon" aria-hidden="true">
+                                <svg width="36" height="36" viewBox="0 0 16 16" fill="none">
+                                    <rect x="5" y="5" width="6" height="6" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="3" y1="6" x2="5" y2="6" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="3" y1="8" x2="5" y2="8" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="3" y1="10" x2="5" y2="10" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="11" y1="6" x2="13" y2="6" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="11" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="11" y1="10" x2="13" y2="10" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="6" y1="3" x2="6" y2="5" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="8" y1="3" x2="8" y2="5" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="10" y1="3" x2="10" y2="5" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="6" y1="11" x2="6" y2="13" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="8" y1="11" x2="8" y2="13" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="10" y1="11" x2="10" y2="13" stroke="currentColor" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <div class="node-card-title-text">
+                                <div class="node-card-model">NVIDIA H100 80GB</div>
+                                <div class="node-card-driver">Driver 535.183.01</div>
+                            </div>
+                        </div>
+                        <dl class="node-card-metrics">
+                            <div class="node-card-metric">
+                                <dt>THROUGHPUT</dt>
+                                <dd>12.4 TF/s</dd>
+                            </div>
+                            <div class="node-card-metric">
+                                <dt>RATE</dt>
+                                <dd>$2.19/hr</dd>
+                            </div>
+                            <div class="node-card-metric">
+                                <dt>EARNED</dt>
+                                <dd>0.42 $SoPU</dd>
+                            </div>
+                        </dl>
+                        <div class="node-card-footer">
+                            <div class="node-card-uptime">Uptime 14d 6h &middot; 99.4%</div>
+                            <a class="node-card-action" href="#">View node <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <h3>Turn idle GPUs into yield.</h3>
+                        <p>Run the Solara node client on any consumer or enterprise GPU. The protocol matches your hardware to live demand and streams $SoPU rewards every block.</p>
+                        <ul class="panel-bullets">
+                            <li>RTX 3060 to H100</li>
+                            <li>Set your own pricing</li>
+                            <li>Stream payments by block</li>
+                        </ul>
+                        <a href="#" class="cta-link">Become a Provider <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+
+                <article class="network-panel" data-reveal>
+                    <div class="panel-eyebrow">Demand</div>
+                    <div class="node-card" data-ambient>
+                        <div class="node-card-status">
+                            <div class="node-card-meta">job-7842 &middot; inference</div>
+                        </div>
+                        <div class="node-card-title">
+                            <div class="title-icon" aria-hidden="true">
+                                <svg width="36" height="36" viewBox="0 0 16 16" fill="none">
+                                    <rect x="3" y="3" width="10" height="3" rx="0.5" stroke="currentColor" stroke-width="1"/>
+                                    <rect x="3" y="7" width="10" height="3" rx="0.5" stroke="currentColor" stroke-width="1"/>
+                                    <rect x="3" y="11" width="10" height="3" rx="0.5" stroke="currentColor" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <div class="node-card-title-text">
+                                <div class="node-card-model">docker.io/vllm:v0.10.2</div>
+                                <div class="node-card-driver">vLLM 0.10.2 &middot; CUDA 12.1</div>
+                            </div>
+                        </div>
+                        <dl class="node-card-metrics">
+                            <div class="node-card-metric">
+                                <dt>GPU</dt>
+                                <dd>H100 &times;1</dd>
+                            </div>
+                            <div class="node-card-metric">
+                                <dt>ELAPSED</dt>
+                                <dd>00:14:32</dd>
+                            </div>
+                            <div class="node-card-metric">
+                                <dt>COST</dt>
+                                <dd>$0.53</dd>
+                            </div>
+                        </dl>
+                        <div class="node-card-footer">
+                            <div class="node-card-uptime">Latency 47ms &middot; 99.8% success</div>
+                            <a class="node-card-action" href="#">View job <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <h3>Rent compute by the hour.</h3>
+                        <p>Spin up GPU instances for inference, training, or rendering without long-term contracts. Pay per second in $SoPU. No KYC, no waitlist.</p>
+                        <ul class="panel-bullets">
+                            <li>Per-second billing</li>
+                            <li>One-click deploy (PyTorch, ComfyUI, Stable Diffusion)</li>
+                            <li>60 to 80% below AWS</li>
+                        </ul>
+                        <a href="#" class="cta-link">Browse GPUs <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section class="how-it-works" id="flow">
+        <div class="how-it-works-content">
+            <div class="section-header" data-reveal>
+                <div class="section-index">03 &middot; Flow</div>
+                <h2><span>From wallet to compute in 60 seconds.</span></h2>
+            </div>
+
+            <div class="steps-grid" data-reveal-stagger>
+                <div class="step-item" data-reveal>
+                    <div class="step-image step-image--wallet" role="img" aria-label="Solana wallet providers orbiting a central wallet">
+                        <div class="wallet-orbit" aria-hidden="true">
+                            <div class="wallet-orbit-rings">
+                                <span class="wallet-orbit-ring wallet-orbit-ring--outer"></span>
+                                <span class="wallet-orbit-ring wallet-orbit-ring--mid"></span>
+                                <span class="wallet-orbit-ring wallet-orbit-ring--inner"></span>
+                            </div>
+                            <div class="wallet-orbit-icon wallet-orbit-icon--phantom">
+                                <img src="assets/Phantom-Integration-Assets.svg" alt="" class="wallet-orbit-svg">
+                            </div>
+                            <div class="wallet-orbit-icon wallet-orbit-icon--solflare">
+                                <img src="assets/solflare.svg" alt="" class="wallet-orbit-svg">
+                            </div>
+                            <div class="wallet-orbit-icon wallet-orbit-icon--metamask">
+                                <img src="assets/metamask.svg" alt="" class="wallet-orbit-svg">
+                            </div>
+                            <div class="wallet-orbit-core">
+                                <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128v288c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h368c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zm352 272c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-content">
+                        <div class="step-number">01</div>
+                        <h3>Connect a wallet</h3>
+                        <p>Phantom or Solflare. No registration.</p>
+                    </div>
+                </div>
+
+                <div class="step-item" data-reveal>
+                    <div class="step-image step-image--terminal" role="img" aria-label="Terminal showing node install and benchmark output, with hourly rate readout">
+                        <div class="terminal-panel" aria-hidden="true">
+                            <div class="terminal-card">
+                                <div class="terminal-header">
+                                    <span class="terminal-dot terminal-dot--red"></span>
+                                    <span class="terminal-dot terminal-dot--yellow"></span>
+                                    <span class="terminal-dot terminal-dot--green"></span>
+                                    <span class="terminal-title">terminal</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-cmd">npm install -g sopu-node</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-cmd">sopu benchmark</span>
+                                    </div>
+                                    <div class="terminal-line terminal-line--output">
+                                        <span class="terminal-output">Running benchmark... <span class="terminal-bar-fill">██████</span><span class="terminal-bar-empty">░░</span> 78%</span>
+                                    </div>
+                                    <div class="terminal-line terminal-line--output">
+                                        <span class="terminal-output">Score: <span class="terminal-output-accent">9,240 pts</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="terminal-rate">
+                                <div class="terminal-rate-label">
+                                    <img src="assets/sopu-icon.svg" alt="" class="terminal-rate-icon">
+                                    <span>Hourly rate</span>
+                                </div>
+                                <div class="terminal-rate-value">
+                                    <span>0.42 $SoPU</span>
+                                    <span class="terminal-rate-pulse"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-content">
+                        <div class="step-number">02</div>
+                        <h3>Install node client</h3>
+                        <p>Run a benchmark and set your hourly rate.</p>
+                    </div>
+                </div>
+
+                <div class="step-item" data-reveal>
+                    <div class="step-image step-image--cashflow" role="img" aria-label="Cashflow chart with income and spend lines, tooltip showing April 2023">
+                        <div class="cashflow-card" aria-hidden="true">
+                            <div class="cashflow-chart">
+                                <div class="cashflow-y-axis">
+                                    <span>$6k</span>
+                                    <span>$5k</span>
+                                    <span>$4k</span>
+                                    <span>$3k</span>
+                                    <span>$2k</span>
+                                    <span>$1k</span>
+                                    <span>0k</span>
+                                </div>
+                                <div class="cashflow-plot">
+                                    <svg viewBox="0 0 700 280" preserveAspectRatio="none" class="cashflow-svg" aria-hidden="true">
+                                        <defs>
+                                            <linearGradient id="cashflowIncomeArea" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="oklch(0.85 0.18 165)" stop-opacity="0.40"/>
+                                                <stop offset="100%" stop-color="oklch(0.70 0.10 165)" stop-opacity="0"/>
+                                            </linearGradient>
+                                            <linearGradient id="cashflowIncomeLine" x1="0" y1="0" x2="1" y2="0">
+                                                <stop offset="0%"  stop-color="oklch(0.74 0.12 165)"/>
+                                                <stop offset="55%" stop-color="oklch(0.82 0.17 165)"/>
+                                                <stop offset="100%" stop-color="oklch(0.92 0.18 165)"/>
+                                            </linearGradient>
+                                        </defs>
+
+                                        <path d="M 0,205 L 100,182 L 200,159 L 300,131 L 400,103 L 500,75 L 600,51 L 700,28 L 700,280 L 0,280 Z" fill="url(#cashflowIncomeArea)"/>
+
+                                        <line x1="200" y1="0" x2="200" y2="280" stroke="oklch(0.97 0.005 165 / 0.20)" stroke-width="1" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/>
+
+                                        <polyline points="0,205 100,182 200,159 300,131 400,103 500,75 600,51 700,28" fill="none" stroke="url(#cashflowIncomeLine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+
+                                        <circle cx="200" cy="159" r="4" fill="oklch(0.20 0.012 165)" stroke="oklch(0.82 0.17 165)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                                    </svg>
+
+                                    <div class="cashflow-tooltip">
+                                        <div class="cashflow-tooltip-date">Apr 2023</div>
+                                        <div class="cashflow-tooltip-row">
+                                            <span class="cashflow-tooltip-mark cashflow-tooltip-mark--income"></span>
+                                            <span class="cashflow-tooltip-label">Income</span>
+                                            <span class="cashflow-tooltip-value">$5,540</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cashflow-x-axis">
+                                        <span>Jan</span>
+                                        <span>Feb</span>
+                                        <span class="active">Mar</span>
+                                        <span>Apr</span>
+                                        <span>May</span>
+                                        <span>Jun</span>
+                                        <span>Jul</span>
+                                        <span>Aug</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-content">
+                        <div class="step-number">03</div>
+                        <h3>$SoPU streams in</h3>
+                        <p>Earnings stream for every job processed. Withdraw anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="capability" id="features">
+        <div class="capability-content">
+            <div class="section-header" data-reveal>
+                <div class="section-index">04 &middot; Features</div>
+                <h2><span>What sets us apart.</span></h2>
+            </div>
+
+            <div class="feature-list" role="list" data-reveal-stagger>
+                <div class="feature-row" role="listitem" data-reveal>
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg class="iglyph" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M0 80v149.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                    </div>
+                    <div class="feature-body">
+                        <h3>Up to 80% lower</h3>
+                        <p>H100 from $2.19/hr. No reserved instances, no commitments.</p>
+                    </div>
+                    <span class="feature-sku" aria-hidden="true">01 &middot; Pricing</span>
+                    <span class="feature-vent" aria-hidden="true"></span>
+                </div>
+
+                <div class="feature-row" role="listitem" data-reveal>
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg class="iglyph" viewBox="0 0 640 512" aria-hidden="true"><path fill="currentColor" d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6 31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5 50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C73.8 372 73.8 321 105.3 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0 27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                    </div>
+                    <div class="feature-body">
+                        <h3>Settled on-chain</h3>
+                        <p>Every job pays out on Solana. ~$0.00025 per transaction.</p>
+                    </div>
+                    <span class="feature-sku" aria-hidden="true">02 &middot; Network</span>
+                    <span class="feature-vent" aria-hidden="true"></span>
+                </div>
+
+                <div class="feature-row" role="listitem" data-reveal>
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0 160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24v-40h40c13.3 0 24-10.7 24-24v-40h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg>
+                    </div>
+                    <div class="feature-body">
+                        <h3>Open access</h3>
+                        <p>Connect a wallet and you're in. No forms, no approval queue.</p>
+                    </div>
+                    <span class="feature-sku" aria-hidden="true">03 &middot; Access</span>
+                    <span class="feature-vent" aria-hidden="true"></span>
+                </div>
+
+                <div class="feature-row" role="listitem" data-reveal>
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6v242.8c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66 82.3 128 256 190l173.7-62L256 66zm32 368.6 160-57.1v-188L288 246.6v188z"/></svg>
+                    </div>
+                    <div class="feature-body">
+                        <h3>Pre-built environments</h3>
+                        <p>Spin up popular frameworks instantly. No CUDA setup, no driver hell.</p>
+                    </div>
+                    <span class="feature-sku" aria-hidden="true">04 &middot; Runtime</span>
+                    <span class="feature-vent" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Section -->
+    <section class="what-you-get" id="token">
+        <div class="what-you-get-content">
+            <canvas class="flickering-grid" aria-hidden="true"></canvas>
+            <div class="section-header" data-reveal>
+                <div class="section-index">05 &middot; Token</div>
+                <h2><span>$SoPU is the unit of compute.</span></h2>
+                <h3>Builders pay. Providers earn. Stakers share network fees.</h3>
+            </div>
+
+            <div class="benefits-horizontal">
+                <div class="benefit-row" data-reveal-stagger>
+                <div class="benefit-card" data-reveal>
+                    <div class="benefit-details">
+                        <h3>Supply</h3>
+                        <div class="token-viz token-viz--supply">
+                            <div class="supply-top">
+                                <div class="supply-bars" role="img" aria-label="24.3 percent of total supply circulating">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="supply-caption">Circulating supply<br>of 100M total</div>
+                            </div>
+                            <div class="supply-percentage">24.3<span class="supply-percent-glyph">%</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card" data-reveal>
+                    <div class="benefit-details">
+                        <h3>Allocation</h3>
+                        <div class="token-viz token-viz--allocation">
+                            <div class="token-stack" role="img" aria-label="Token allocation, six segments by share">
+                                <div class="token-stack-seg" style="flex: 35" data-tier="1"></div>
+                                <div class="token-stack-seg" style="flex: 25" data-tier="2"></div>
+                                <div class="token-stack-seg" style="flex: 15" data-tier="3"></div>
+                                <div class="token-stack-seg" style="flex: 10" data-tier="4"></div>
+                                <div class="token-stack-seg" style="flex: 10" data-tier="5"></div>
+                                <div class="token-stack-seg" style="flex: 5"  data-tier="6"></div>
+                            </div>
+                            <div class="token-legend">
+                                <div class="legend-row">
+                                    <span class="legend-swatch" data-tier="1"></span>
+                                    <span class="legend-label">Network rewards</span>
+                                    <span class="legend-value">35%</span>
+                                </div>
+                                <div class="legend-row">
+                                    <span class="legend-swatch" data-tier="2"></span>
+                                    <span class="legend-label">Community</span>
+                                    <span class="legend-value">25%</span>
+                                </div>
+                                <div class="legend-row">
+                                    <span class="legend-swatch" data-tier="3"></span>
+                                    <span class="legend-label">Public sale</span>
+                                    <span class="legend-value">15%</span>
+                                </div>
+                                <div class="legend-row">
+                                    <span class="legend-swatch" data-tier="4"></span>
+                                    <span class="legend-label">Team (4yr vest)</span>
+                                    <span class="legend-value">10%</span>
+                                </div>
+                                <div class="legend-row">
+                                    <span class="legend-swatch" data-tier="5"></span>
+                                    <span class="legend-label">Treasury</span>
+                                    <span class="legend-value">10%</span>
+                                </div>
+                                <div class="legend-row">
+                                    <span class="legend-swatch" data-tier="6"></span>
+                                    <span class="legend-label">Liquidity</span>
+                                    <span class="legend-value">5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Network Status Section -->
+    <section class="join-ecosystem" id="network-status">
+        <div class="join-ecosystem-content">
+            <div class="section-header" data-reveal>
+                <div class="section-index">06 &middot; Status</div>
+                <h2><span>Live numbers, not promises.</span></h2>
+                <h3>Network signals straight from the chain.</h3>
+            </div>
+
+            <div class="status-stats" data-reveal-stagger>
+                <div class="status-stat" data-reveal>
+                    <div class="status-stat-value">1,287</div>
+                    <div class="status-stat-label">Active nodes</div>
+                </div>
+                <div class="status-stat" data-reveal>
+                    <div class="status-stat-value">184k+</div>
+                    <div class="status-stat-label">Compute hours</div>
+                </div>
+                <div class="status-stat" data-reveal>
+                    <div class="status-stat-value">$890k</div>
+                    <div class="status-stat-label">Rewards distributed</div>
+                </div>
+                <div class="status-stat" data-reveal>
+                    <div class="status-stat-value">8,432</div>
+                    <div class="status-stat-label">$SoPU holders</div>
+                </div>
+            </div>
+
+            <div class="status-dashboard" aria-hidden="true" data-reveal>
+                <div class="status-dashboard-glow" data-ambient>
+                    <span class="glow glow-mint"></span>
+                    <span class="glow glow-mint-2"></span>
+                    <span class="glow glow-cyan"></span>
+                    <span class="glow glow-cyan-2"></span>
+                    <span class="glow glow-violet"></span>
+                    <span class="glow glow-amber"></span>
+                </div>
+                <div class="status-dashboard-frame">
+                    <aside class="dash-rail">
+                        <div class="dash-mark" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="14" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="4" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="14" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.35"/>
+                            </svg>
+                        </div>
+                        <div class="dash-util" title="Cluster utilization">
+                            <div class="dash-util-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <circle cx="18" cy="18" r="15" stroke="rgba(255,255,255,0.08)" stroke-width="3" fill="none"/>
+                                    <circle cx="18" cy="18" r="15" stroke="currentColor" stroke-width="3" fill="none"
+                                        stroke-dasharray="94.2" stroke-dashoffset="32" stroke-linecap="round"
+                                        transform="rotate(-90 18 18)"/>
+                                </svg>
+                                <span class="dash-util-num">68<i>%</i></span>
+                            </div>
+                            <div class="dash-util-label">UTIL</div>
+                        </div>
+                        <ul class="dash-nav">
+                            <li class="active" title="Overview">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" stroke="currentColor"/><rect x="9" y="2" width="5" height="5" stroke="currentColor"/><rect x="2" y="9" width="5" height="5" stroke="currentColor"/><rect x="9" y="9" width="5" height="5" stroke="currentColor" fill="currentColor" fill-opacity="0.4"/></svg>
+                            </li>
+                            <li title="Nodes">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="3" width="11" height="3.5" rx="0.5" stroke="currentColor"/><rect x="2.5" y="9.5" width="11" height="3.5" rx="0.5" stroke="currentColor"/><circle cx="4.5" cy="4.75" r="0.6" fill="currentColor"/><circle cx="4.5" cy="11.25" r="0.6" fill="currentColor"/></svg>
+                            </li>
+                            <li title="Jobs">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M3 4h10M3 12h6" stroke="currentColor" stroke-linecap="round"/></svg>
+                            </li>
+                            <li title="Earnings">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2.5 12 6 8.5l2.5 2.5L13.5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 5h3v3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </li>
+                            <li title="Activity">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h2.5l1.5-4 3 8 1.5-4H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </li>
+                            <li title="Settings">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2" stroke="currentColor"/><path d="M8 2v1.5M8 12.5V14M14 8h-1.5M3.5 8H2M12.24 3.76l-1.06 1.06M4.82 11.18l-1.06 1.06M12.24 12.24l-1.06-1.06M4.82 4.82 3.76 3.76" stroke="currentColor" stroke-linecap="round"/></svg>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <div class="dash-main">
+                        <div class="dash-toolbar">
+                            <div class="dash-search">
+                                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor"/><path d="m11 11 3 3" stroke="currentColor" stroke-linecap="round"/></svg>
+                                <span>Search jobs and nodes&hellip;</span>
+                                <kbd>/</kbd>
+                            </div>
+                            <button class="dash-pill">
+                                <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="5" cy="8" r="2" stroke="currentColor"/><circle cx="11" cy="8" r="2" stroke="currentColor"/></svg>
+                                View
+                            </button>
+                            <button class="dash-pill">
+                                <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 5h10M5 8h6M7 11h2" stroke="currentColor" stroke-linecap="round"/></svg>
+                                Filter
+                            </button>
+                        </div>
+
+                        <div class="dash-grid">
+                            <!-- KPI strip -->
+                            <article class="dash-kpi">
+                                <header>
+                                    <span class="kpi-label">Active nodes</span>
+                                    <span class="kpi-delta up">&uarr; 24</span>
+                                </header>
+                                <div class="kpi-value">1,287</div>
+                                <svg class="kpi-spark" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                                    <polyline points="0,18 8,14 16,16 24,12 32,15 40,9 48,11 56,6 64,8 72,4 80,7 88,3 100,5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </article>
+                            <article class="dash-kpi">
+                                <header>
+                                    <span class="kpi-label">Throughput</span>
+                                    <span class="kpi-delta up">&uarr; 8%</span>
+                                </header>
+                                <div class="kpi-value">42.6 <i>PF/s</i></div>
+                                <svg class="kpi-spark" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                                    <polyline points="0,15 10,16 20,12 30,13 40,9 50,5 60,7 70,3 80,6 90,8 100,4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </article>
+                            <article class="dash-kpi">
+                                <header>
+                                    <span class="kpi-label">Earnings &middot; 24h</span>
+                                    <span class="kpi-delta up">&uarr; 12.4%</span>
+                                </header>
+                                <div class="kpi-value">4,820 <i>$SoPU</i></div>
+                                <svg class="kpi-spark" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                                    <polyline points="0,20 12,18 24,14 36,15 48,11 60,8 72,9 84,5 100,3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </article>
+                            <article class="dash-kpi">
+                                <header>
+                                    <span class="kpi-label">Queue depth</span>
+                                    <span class="kpi-delta down">&darr; 3</span>
+                                </header>
+                                <div class="kpi-value">14 <i>jobs</i></div>
+                                <svg class="kpi-spark down" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                                    <polyline points="0,8 10,10 20,7 30,12 40,9 50,11 60,14 70,10 80,15 90,17 100,16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </article>
+
+                            <!-- Throughput chart (hero) -->
+                            <article class="dash-card dash-card--chart">
+                                <header class="dash-card-head">
+                                    <div>
+                                        <h4>Network throughput</h4>
+                                        <span class="dash-card-sub">PF/s &middot; last 24 hours</span>
+                                    </div>
+                                    <div class="dash-tabs">
+                                        <button class="active" type="button">24H</button>
+                                        <button type="button">7D</button>
+                                        <button type="button">30D</button>
+                                    </div>
+                                </header>
+                                <div class="dash-chart">
+                                    <svg class="area-chart" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
+                                        <defs>
+                                            <linearGradient id="dashAreaFill" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#2CE1AB" stop-opacity="0.42"/>
+                                                <stop offset="100%" stop-color="#2CE1AB" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <line x1="0" y1="55" x2="600" y2="55" stroke="rgba(255,255,255,0.04)" stroke-dasharray="3 5"/>
+                                        <line x1="0" y1="110" x2="600" y2="110" stroke="rgba(255,255,255,0.04)" stroke-dasharray="3 5"/>
+                                        <line x1="0" y1="165" x2="600" y2="165" stroke="rgba(255,255,255,0.04)" stroke-dasharray="3 5"/>
+                                        <path d="M0,170 L50,180 L100,190 L150,170 L200,130 L250,95 L300,55 L350,20 L400,40 L450,70 L500,95 L550,125 L600,110 L600,220 L0,220 Z" fill="url(#dashAreaFill)"/>
+                                        <polyline points="0,170 50,180 100,190 150,170 200,130 250,95 300,55 350,20 400,40 450,70 500,95 550,125 600,110" fill="none" stroke="#2CE1AB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <line x1="0" y1="92" x2="600" y2="92" stroke="rgba(44,225,171,0.32)" stroke-dasharray="2 4"/>
+                                        <circle cx="600" cy="110" r="3.5" fill="#2CE1AB"/>
+                                        <circle cx="600" cy="110" r="7" fill="none" stroke="#2CE1AB" stroke-opacity="0.4"/>
+                                    </svg>
+                                    <div class="dash-chart-x">
+                                        <span>00:00</span>
+                                        <span>06:00</span>
+                                        <span>12:00</span>
+                                        <span>18:00</span>
+                                        <span>now</span>
+                                    </div>
+                                </div>
+                                <footer class="dash-card-foot">
+                                    <span class="legend"><i class="legend-dot"></i> Throughput</span>
+                                    <span class="legend dim"><i class="legend-dash"></i> 24h avg</span>
+                                    <span class="legend-meta">peak 58.2 PF/s &middot; 14:20</span>
+                                </footer>
+                            </article>
+
+                            <!-- Regions: horizontal load bars -->
+                            <article class="dash-card dash-card--list">
+                                <header class="dash-card-head">
+                                    <h4>Regions</h4>
+                                    <span class="dash-card-sub">load %</span>
+                                </header>
+                                <ul class="region-list">
+                                    <li>
+                                        <span class="region-code">eu-central-1</span>
+                                        <span class="region-bar"><span style="width:92%"></span></span>
+                                        <span class="region-pct">92</span>
+                                    </li>
+                                    <li>
+                                        <span class="region-code">us-west-1</span>
+                                        <span class="region-bar"><span style="width:88%"></span></span>
+                                        <span class="region-pct">88</span>
+                                    </li>
+                                    <li>
+                                        <span class="region-code">us-east-1</span>
+                                        <span class="region-bar"><span style="width:74%"></span></span>
+                                        <span class="region-pct">74</span>
+                                    </li>
+                                    <li>
+                                        <span class="region-code">eu-west-2</span>
+                                        <span class="region-bar"><span style="width:61%"></span></span>
+                                        <span class="region-pct">61</span>
+                                    </li>
+                                    <li>
+                                        <span class="region-code">ap-south-1</span>
+                                        <span class="region-bar"><span style="width:53%"></span></span>
+                                        <span class="region-pct">53</span>
+                                    </li>
+                                    <li>
+                                        <span class="region-code">ap-northeast-1</span>
+                                        <span class="region-bar"><span style="width:47%"></span></span>
+                                        <span class="region-pct">47</span>
+                                    </li>
+                                </ul>
+                            </article>
+
+                            <!-- Active jobs (mini-list, varied rows) -->
+                            <article class="dash-card dash-card--jobs">
+                                <header class="dash-card-head">
+                                    <h4>Active jobs</h4>
+                                    <a class="dash-card-link" href="#">View all <span aria-hidden="true">&rarr;</span></a>
+                                </header>
+                                <ul class="dash-jobs">
+                                    <li class="dash-job selected">
+                                        <i class="dot live" aria-hidden="true"></i>
+                                        <div class="job-body">
+                                            <div class="job-title">vLLM 0.10.2 &middot; Llama-3 70B inference</div>
+                                            <div class="job-meta">JOB-7842 &middot; us-west-1 &middot; 00:14:32</div>
+                                        </div>
+                                        <span class="job-badge mint">H100 &times;1</span>
+                                        <span class="job-num">3.24 $SoPU</span>
+                                    </li>
+                                    <li class="dash-job">
+                                        <i class="dot warn" aria-hidden="true"></i>
+                                        <div class="job-body">
+                                            <div class="job-title">vLLM 0.10.2 &middot; Mixtral-8x7B serve <span class="dash-inline-note attention">scaling +2</span></div>
+                                            <div class="job-meta">JOB-7821 &middot; us-east-1 &middot; allocating</div>
+                                        </div>
+                                        <span class="job-badge mint">H100 &times;4</span>
+                                        <span class="job-num">12.40 $SoPU</span>
+                                    </li>
+                                    <li class="dash-job">
+                                        <i class="dot live" aria-hidden="true"></i>
+                                        <div class="job-body">
+                                            <div class="job-title">PyTorch 2.4 &middot; ResNet-152 fine-tune</div>
+                                            <div class="job-progress">
+                                                <div class="dash-progress"><span class="dash-progress-bar" style="width:47%"></span></div>
+                                                <span class="dash-progress-label">epoch 14 / 30</span>
+                                            </div>
+                                        </div>
+                                        <span class="job-badge">RTX 4090 &times;1</span>
+                                        <span class="job-num">0.94 $SoPU</span>
+                                    </li>
+                                    <li class="dash-job">
+                                        <i class="dot live" aria-hidden="true"></i>
+                                        <div class="job-body">
+                                            <div class="job-title">Stable-Diffusion XL &middot; img2img batch</div>
+                                            <div class="job-meta">JOB-7836 &middot; eu-central-1 &middot; 02:48:11</div>
+                                        </div>
+                                        <span class="job-badge">A100 &times;2</span>
+                                        <span class="job-num">5.81 $SoPU</span>
+                                    </li>
+                                    <li class="dash-job">
+                                        <i class="dot live" aria-hidden="true"></i>
+                                        <div class="job-body">
+                                            <div class="job-title">Triton server &middot; YOLO-v8 real-time</div>
+                                            <div class="job-meta">JOB-7811 &middot; eu-west-2 &middot; 04:21:30</div>
+                                        </div>
+                                        <span class="job-badge">A10G &times;2</span>
+                                        <span class="job-num">2.07 $SoPU <span class="dash-trend up">&uarr; 18%</span></span>
+                                    </li>
+                                </ul>
+                            </article>
+
+                            <!-- Network health -->
+                            <article class="dash-card dash-card--health">
+                                <header class="dash-card-head">
+                                    <h4>Network health</h4>
+                                    <span class="health-tag ok">Normal</span>
+                                </header>
+                                <ul class="health-list">
+                                    <li>
+                                        <span class="svc-name">Scheduler</span>
+                                        <span class="svc-uptime">99.98%</span>
+                                        <i class="svc-dot ok"></i>
+                                    </li>
+                                    <li>
+                                        <span class="svc-name">Settlement</span>
+                                        <span class="svc-uptime">99.95%</span>
+                                        <i class="svc-dot ok"></i>
+                                    </li>
+                                    <li>
+                                        <span class="svc-name">Solana RPC</span>
+                                        <span class="svc-uptime">99.71%</span>
+                                        <i class="svc-dot warn"></i>
+                                    </li>
+                                    <li>
+                                        <span class="svc-name">Node gossip</span>
+                                        <span class="svc-uptime">99.99%</span>
+                                        <i class="svc-dot ok"></i>
+                                    </li>
+                                    <li>
+                                        <span class="svc-name">API gateway</span>
+                                        <span class="svc-uptime">100.00%</span>
+                                        <i class="svc-dot ok"></i>
+                                    </li>
+                                </ul>
+                            </article>
+
+                            <!-- GPU mix donut -->
+                            <article class="dash-card dash-card--donut">
+                                <header class="dash-card-head">
+                                    <h4>GPU mix</h4>
+                                    <span class="dash-card-sub">by class</span>
+                                </header>
+                                <div class="donut-wrap">
+                                    <svg class="donut" viewBox="0 0 100 100" aria-hidden="true">
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="11"/>
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="#2CE1AB" stroke-width="11" stroke-dasharray="105.56 251.33" stroke-dashoffset="0" transform="rotate(-90 50 50)"/>
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="#60c8e6" stroke-width="11" stroke-dasharray="70.37 251.33" stroke-dashoffset="-105.56" transform="rotate(-90 50 50)"/>
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(122,102,220,0.85)" stroke-width="11" stroke-dasharray="45.24 251.33" stroke-dashoffset="-175.93" transform="rotate(-90 50 50)"/>
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="11" stroke-dasharray="30.16 251.33" stroke-dashoffset="-221.17" transform="rotate(-90 50 50)"/>
+                                    </svg>
+                                    <div class="donut-center">
+                                        <strong>1,287</strong>
+                                        <span>GPUs</span>
+                                    </div>
+                                </div>
+                                <ul class="donut-legend">
+                                    <li><i class="ldot" style="background:#2CE1AB"></i><span>H100</span><b>42%</b></li>
+                                    <li><i class="ldot" style="background:#60c8e6"></i><span>A100</span><b>28%</b></li>
+                                    <li><i class="ldot" style="background:rgba(122,102,220,0.85)"></i><span>RTX 4090</span><b>18%</b></li>
+                                    <li><i class="ldot" style="background:rgba(255,255,255,0.28)"></i><span>Other</span><b>12%</b></li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/hd.png" alt="Solara Processing Unit">
+                    </div>
+                    <p class="footer-tagline">GPU compute, settled on-chain. A two-sided marketplace on Solana.</p>
+                    <div class="footer-contract">
+                        <span class="footer-contract-label">Contract</span>
+                        <a class="footer-contract-value" href="https://solscan.io/token/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU" target="_blank" rel="noopener noreferrer">7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://x.com/SoPU_SOL" target="_blank" rel="noopener noreferrer" class="icon" title="X">
+                            <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 102.4 464H31.9l164.1-184.6L11 48H156.6l100.5 132.9L389.2 48zM364.4 421.8h39.1L137.5 88H95.2L364.4 421.8z"/></svg>
+                        </a>
+                        <a href="https://t.me/Solara_Processing_Unit" target="_blank" rel="noopener noreferrer" class="icon" title="Telegram">
+                            <svg class="iglyph" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm115 169c-4 39-20 134-28 178-3 19-10 25-17 25-14 1-25-10-39-19-22-15-36-23-58-37-25-17-9-27 5-42 4-4 67-62 68-67 0-1 0-3-1-4-2-2-4-1-5-1-2 1-37 23-105 69-10 7-19 10-27 10-9 0-26-5-38-9-16-5-28-8-27-16 1-5 7-9 18-14 73-32 121-53 145-62 69-29 83-34 92-34 2 0 7 0 10 3 2 2 3 5 4 7 0 1 1 5 0 8z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Navigate</h3>
+                    <ul class="footer-links">
+                        <li><a href="#network">Network</a></li>
+                        <li><a href="#flow">Flow</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#token">Token</a></li>
+                        <li><a href="#network-status">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Markets</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://solscan.io" target="_blank" rel="noopener noreferrer">Solscan <span aria-hidden="true">&rarr;</span></a></li>
+                        <li><a href="https://raydium.io" target="_blank" rel="noopener noreferrer">Raydium <span aria-hidden="true">&rarr;</span></a></li>
+                        <li><a href="https://dexscreener.com/solana/24tYhFurtSsgBNSBgxWynYWRUbrxw6acGhmLPKS9UD78" target="_blank" rel="noopener noreferrer">DEX Screener <span aria-hidden="true">&rarr;</span></a></li>
+                        <li><a href="https://www.dextools.io/app/en/solana/pair-explorer/24tYhFurtSsgBNSBgxWynYWRUbrxw6acGhmLPKS9UD78" target="_blank" rel="noopener noreferrer">DEXTools <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Solara Processing Unit. All rights reserved.</p>
+                <p class="footer-disclaimer">Network metrics shown are illustrative. Refer to on-chain data for live values.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Handle active state of navigation links
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        function updateActiveLink() {
+            const scrollPosition = window.scrollY;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        window.addEventListener('load', updateActiveLink);
+
+        // Mobile menu functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinksContainer = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Scroll reveal — fade + small rise once each element enters view.
+        // Gated by html.js in CSS, so non-JS visitors get content visible by default.
+        const revealEls = document.querySelectorAll('[data-reveal]');
+        if ('IntersectionObserver' in window && revealEls.length) {
+            const revealIO = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '0px 0px -8% 0px',
+                threshold: 0.15
+            });
+            revealEls.forEach(el => revealIO.observe(el));
+        } else {
+            revealEls.forEach(el => el.classList.add('is-revealed'));
+        }
+
+        // Off-screen ambient pause — CPU/GPU sleeps when these blocks aren't on screen.
+        // CSS handles the actual animation-play-state via .is-offscreen rules.
+        const ambientEls = document.querySelectorAll('[data-ambient]');
+        if ('IntersectionObserver' in window && ambientEls.length) {
+            const ambientIO = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle('is-offscreen', !entry.isIntersecting);
+                });
+            }, { rootMargin: '200px 0px' });
+            ambientEls.forEach(el => ambientIO.observe(el));
+        }
+
+        // Counter-up — parses each value's prefix ($), number, suffix (M, k, k+).
+        // Hero metrics tick on a timer synced to their stagger arrival.
+        // Status stats tick when scrolled into view. Reduced-motion: skip entirely.
+        (function counters() {
+            const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const heroEls = document.querySelectorAll('.hero-metric-value');
+            const statusEls = document.querySelectorAll('.status-stat-value');
+            if (reduced || (!heroEls.length && !statusEls.length)) return;
+
+            const numRe = /^([^\d-]*)(-?[\d.,]+)(.*)$/;
+            function parse(el) {
+                const raw = el.dataset.countTarget || el.textContent.trim();
+                el.dataset.countTarget = raw;
+                const m = raw.match(numRe);
+                if (!m) return null;
+                const numStr = m[2].replace(/,/g, '');
+                const target = parseFloat(numStr);
+                if (!isFinite(target)) return null;
+                const dec = numStr.includes('.') ? numStr.split('.')[1].length : 0;
+                return {
+                    prefix: m[1],
+                    suffix: m[3],
+                    target,
+                    decimals: dec,
+                    grouped: m[2].includes(',')
+                };
+            }
+            function format(n, spec) {
+                let s = n.toFixed(spec.decimals);
+                if (spec.grouped) {
+                    const [int, frac] = s.split('.');
+                    s = int.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + (frac ? '.' + frac : '');
+                }
+                return spec.prefix + s + spec.suffix;
+            }
+            function run(el, duration) {
+                const spec = parse(el);
+                if (!spec) return;
+                el.textContent = format(0, spec);
+                const start = performance.now();
+                (function tick(now) {
+                    const t = Math.min(1, (now - start) / duration);
+                    const eased = 1 - Math.pow(1 - t, 4);
+                    el.textContent = format(spec.target * eased, spec);
+                    if (t < 1) requestAnimationFrame(tick);
+                })(start);
+            }
+
+            // Hero: pre-zero so the initial frame matches the hidden hero-rise state,
+            // then animate after the stagger reveal lands (~720ms in).
+            heroEls.forEach(el => { const s = parse(el); if (s) el.textContent = format(0, s); });
+            setTimeout(() => heroEls.forEach(el => run(el, 1500)), 720);
+
+            // Status: pre-zero, animate on intersect.
+            if ('IntersectionObserver' in window && statusEls.length) {
+                statusEls.forEach(el => { const s = parse(el); if (s) el.textContent = format(0, s); });
+                const countIO = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            run(entry.target, 1600);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.4 });
+                statusEls.forEach(el => countIO.observe(el));
+            }
+        })();
+
+    </script>
+    <script src="assets/flickering-grid.js" defer></script>
+</body>
+</html>
