@@ -238,145 +238,281 @@
                 <h2><span>From wallet to compute in 60 seconds.</span></h2>
             </div>
 
-            <div class="steps-grid" data-reveal-stagger>
-                <div class="step-item" data-reveal>
-                    <div class="step-image step-image--wallet" role="img" aria-label="Solana wallet providers orbiting a central wallet">
-                        <div class="wallet-orbit" aria-hidden="true">
-                            <div class="wallet-orbit-rings">
-                                <span class="wallet-orbit-ring wallet-orbit-ring--outer"></span>
-                                <span class="wallet-orbit-ring wallet-orbit-ring--mid"></span>
-                                <span class="wallet-orbit-ring wallet-orbit-ring--inner"></span>
-                            </div>
-                            <div class="wallet-orbit-icon wallet-orbit-icon--phantom">
-                                <img src="assets/Phantom-Integration-Assets.svg" alt="" class="wallet-orbit-svg">
-                            </div>
-                            <div class="wallet-orbit-icon wallet-orbit-icon--solflare">
-                                <img src="assets/solflare.svg" alt="" class="wallet-orbit-svg">
-                            </div>
-                            <div class="wallet-orbit-icon wallet-orbit-icon--metamask">
-                                <img src="assets/metamask.svg" alt="" class="wallet-orbit-svg">
-                            </div>
-                            <div class="wallet-orbit-core">
-                                <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128v288c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h368c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zm352 272c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inner-content">
-                        <div class="step-number">01</div>
-                        <h3>Connect a wallet</h3>
-                        <p>Phantom or Solflare. No registration.</p>
-                    </div>
-                </div>
+            <div class="flow-tabs" role="tablist" aria-label="Flow audience" data-reveal>
+                <button class="flow-tab is-active" type="button" role="tab" id="flow-tab-provide" aria-selected="true" aria-controls="flow-panel-provide" data-flow-target="provide">
+                    <span class="flow-tab-eyebrow">For providers</span>
+                    <span class="flow-tab-label">Provide a GPU</span>
+                </button>
+                <button class="flow-tab" type="button" role="tab" id="flow-tab-rent" aria-selected="false" aria-controls="flow-panel-rent" data-flow-target="rent" tabindex="-1">
+                    <span class="flow-tab-eyebrow">For builders</span>
+                    <span class="flow-tab-label">Rent a GPU</span>
+                </button>
+                <span class="flow-tabs-indicator" aria-hidden="true"></span>
+            </div>
 
-                <div class="step-item" data-reveal>
-                    <div class="step-image step-image--terminal" role="img" aria-label="Terminal showing node install and benchmark output, with hourly rate readout">
-                        <div class="terminal-panel" aria-hidden="true">
-                            <div class="terminal-card">
-                                <div class="terminal-header">
-                                    <span class="terminal-dot terminal-dot--red"></span>
-                                    <span class="terminal-dot terminal-dot--yellow"></span>
-                                    <span class="terminal-dot terminal-dot--green"></span>
-                                    <span class="terminal-title">terminal</span>
+            <div class="flow-panel is-active" id="flow-panel-provide" role="tabpanel" aria-labelledby="flow-tab-provide">
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-image step-image--wallet" role="img" aria-label="Solana wallet providers orbiting a central wallet">
+                            <div class="wallet-orbit" aria-hidden="true">
+                                <div class="wallet-orbit-rings">
+                                    <span class="wallet-orbit-ring wallet-orbit-ring--outer"></span>
+                                    <span class="wallet-orbit-ring wallet-orbit-ring--mid"></span>
+                                    <span class="wallet-orbit-ring wallet-orbit-ring--inner"></span>
                                 </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">
-                                        <span class="terminal-prompt">$</span>
-                                        <span class="terminal-cmd">npm install -g sopu-node</span>
-                                    </div>
-                                    <div class="terminal-line">
-                                        <span class="terminal-prompt">$</span>
-                                        <span class="terminal-cmd">sopu benchmark</span>
-                                    </div>
-                                    <div class="terminal-line terminal-line--output">
-                                        <span class="terminal-output">Running benchmark... <span class="terminal-bar-fill">██████</span><span class="terminal-bar-empty">░░</span> 78%</span>
-                                    </div>
-                                    <div class="terminal-line terminal-line--output">
-                                        <span class="terminal-output">Score: <span class="terminal-output-accent">9,240 pts</span></span>
-                                    </div>
+                                <div class="wallet-orbit-icon wallet-orbit-icon--phantom">
+                                    <img src="assets/Phantom-Integration-Assets.svg" alt="" class="wallet-orbit-svg">
                                 </div>
-                            </div>
-                            <div class="terminal-rate">
-                                <div class="terminal-rate-label">
-                                    <img src="assets/sopu-icon.svg" alt="" class="terminal-rate-icon">
-                                    <span>Hourly rate</span>
+                                <div class="wallet-orbit-icon wallet-orbit-icon--solflare">
+                                    <img src="assets/solflare.svg" alt="" class="wallet-orbit-svg">
                                 </div>
-                                <div class="terminal-rate-value">
-                                    <span>0.42 $SoPU</span>
-                                    <span class="terminal-rate-pulse"></span>
+                                <div class="wallet-orbit-icon wallet-orbit-icon--metamask">
+                                    <img src="assets/metamask.svg" alt="" class="wallet-orbit-svg">
+                                </div>
+                                <div class="wallet-orbit-core">
+                                    <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128v288c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h368c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zm352 272c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>
                                 </div>
                             </div>
                         </div>
+                        <div class="inner-content">
+                            <div class="step-number">01</div>
+                            <h3>Connect a wallet</h3>
+                            <p>Phantom or Solflare. No registration.</p>
+                        </div>
                     </div>
-                    <div class="inner-content">
-                        <div class="step-number">02</div>
-                        <h3>Install node client</h3>
-                        <p>Run a benchmark and set your hourly rate.</p>
-                    </div>
-                </div>
 
-                <div class="step-item" data-reveal>
-                    <div class="step-image step-image--cashflow" role="img" aria-label="Cashflow chart with income and spend lines, tooltip showing April 2023">
-                        <div class="cashflow-card" aria-hidden="true">
-                            <div class="cashflow-chart">
-                                <div class="cashflow-y-axis">
-                                    <span>$6k</span>
-                                    <span>$5k</span>
-                                    <span>$4k</span>
-                                    <span>$3k</span>
-                                    <span>$2k</span>
-                                    <span>$1k</span>
-                                    <span>0k</span>
-                                </div>
-                                <div class="cashflow-plot">
-                                    <svg viewBox="0 0 700 280" preserveAspectRatio="none" class="cashflow-svg" aria-hidden="true">
-                                        <defs>
-                                            <linearGradient id="cashflowIncomeArea" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stop-color="oklch(0.85 0.18 165)" stop-opacity="0.40"/>
-                                                <stop offset="100%" stop-color="oklch(0.70 0.10 165)" stop-opacity="0"/>
-                                            </linearGradient>
-                                            <linearGradient id="cashflowIncomeLine" x1="0" y1="0" x2="1" y2="0">
-                                                <stop offset="0%"  stop-color="oklch(0.74 0.12 165)"/>
-                                                <stop offset="55%" stop-color="oklch(0.82 0.17 165)"/>
-                                                <stop offset="100%" stop-color="oklch(0.92 0.18 165)"/>
-                                            </linearGradient>
-                                        </defs>
-
-                                        <path d="M 0,205 L 100,182 L 200,159 L 300,131 L 400,103 L 500,75 L 600,51 L 700,28 L 700,280 L 0,280 Z" fill="url(#cashflowIncomeArea)"/>
-
-                                        <line x1="200" y1="0" x2="200" y2="280" stroke="oklch(0.97 0.005 165 / 0.20)" stroke-width="1" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/>
-
-                                        <polyline points="0,205 100,182 200,159 300,131 400,103 500,75 600,51 700,28" fill="none" stroke="url(#cashflowIncomeLine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
-
-                                        <circle cx="200" cy="159" r="4" fill="oklch(0.20 0.012 165)" stroke="oklch(0.82 0.17 165)" stroke-width="2" vector-effect="non-scaling-stroke"/>
-                                    </svg>
-
-                                    <div class="cashflow-tooltip">
-                                        <div class="cashflow-tooltip-date">Apr 2023</div>
-                                        <div class="cashflow-tooltip-row">
-                                            <span class="cashflow-tooltip-mark cashflow-tooltip-mark--income"></span>
-                                            <span class="cashflow-tooltip-label">Income</span>
-                                            <span class="cashflow-tooltip-value">$5,540</span>
+                    <div class="step-item">
+                        <div class="step-image step-image--terminal" role="img" aria-label="Terminal showing node install and benchmark output, with hourly rate readout">
+                            <div class="terminal-panel" aria-hidden="true">
+                                <div class="terminal-card">
+                                    <div class="terminal-header">
+                                        <span class="terminal-dot terminal-dot--red"></span>
+                                        <span class="terminal-dot terminal-dot--yellow"></span>
+                                        <span class="terminal-dot terminal-dot--green"></span>
+                                        <span class="terminal-title">terminal</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <div class="terminal-line">
+                                            <span class="terminal-prompt">$</span>
+                                            <span class="terminal-cmd">npm install -g sopu-node</span>
+                                        </div>
+                                        <div class="terminal-line">
+                                            <span class="terminal-prompt">$</span>
+                                            <span class="terminal-cmd">sopu benchmark</span>
+                                        </div>
+                                        <div class="terminal-line terminal-line--output">
+                                            <span class="terminal-output">Running benchmark... <span class="terminal-bar-fill">██████</span><span class="terminal-bar-empty">░░</span> 78%</span>
+                                        </div>
+                                        <div class="terminal-line terminal-line--output">
+                                            <span class="terminal-output">Score: <span class="terminal-output-accent">9,240 pts</span></span>
                                         </div>
                                     </div>
-
-                                    <div class="cashflow-x-axis">
-                                        <span>Jan</span>
-                                        <span>Feb</span>
-                                        <span class="active">Mar</span>
-                                        <span>Apr</span>
-                                        <span>May</span>
-                                        <span>Jun</span>
-                                        <span>Jul</span>
-                                        <span>Aug</span>
+                                </div>
+                                <div class="terminal-rate">
+                                    <div class="terminal-rate-label">
+                                        <img src="assets/sopu-icon.svg" alt="" class="terminal-rate-icon">
+                                        <span>Hourly rate</span>
+                                    </div>
+                                    <div class="terminal-rate-value">
+                                        <span>0.42 $SoPU</span>
+                                        <span class="terminal-rate-pulse"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="inner-content">
+                            <div class="step-number">02</div>
+                            <h3>Install node client</h3>
+                            <p>Run a benchmark and set your hourly rate.</p>
+                        </div>
                     </div>
-                    <div class="inner-content">
-                        <div class="step-number">03</div>
-                        <h3>$SoPU streams in</h3>
-                        <p>Earnings stream for every job processed. Withdraw anytime.</p>
+
+                    <div class="step-item">
+                        <div class="step-image step-image--cashflow" role="img" aria-label="Cashflow chart with income and spend lines, tooltip showing April 2023">
+                            <div class="cashflow-card" aria-hidden="true">
+                                <div class="cashflow-chart">
+                                    <div class="cashflow-y-axis">
+                                        <span>$6k</span>
+                                        <span>$5k</span>
+                                        <span>$4k</span>
+                                        <span>$3k</span>
+                                        <span>$2k</span>
+                                        <span>$1k</span>
+                                        <span>0k</span>
+                                    </div>
+                                    <div class="cashflow-plot">
+                                        <svg viewBox="0 0 700 280" preserveAspectRatio="none" class="cashflow-svg" aria-hidden="true">
+                                            <defs>
+                                                <linearGradient id="cashflowIncomeArea" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop offset="0%" stop-color="oklch(0.85 0.18 165)" stop-opacity="0.40"/>
+                                                    <stop offset="100%" stop-color="oklch(0.70 0.10 165)" stop-opacity="0"/>
+                                                </linearGradient>
+                                                <linearGradient id="cashflowIncomeLine" x1="0" y1="0" x2="1" y2="0">
+                                                    <stop offset="0%"  stop-color="oklch(0.74 0.12 165)"/>
+                                                    <stop offset="55%" stop-color="oklch(0.82 0.17 165)"/>
+                                                    <stop offset="100%" stop-color="oklch(0.92 0.18 165)"/>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <path d="M 0,205 L 100,182 L 200,159 L 300,131 L 400,103 L 500,75 L 600,51 L 700,28 L 700,280 L 0,280 Z" fill="url(#cashflowIncomeArea)"/>
+
+                                            <line x1="200" y1="0" x2="200" y2="280" stroke="oklch(0.97 0.005 165 / 0.20)" stroke-width="1" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/>
+
+                                            <polyline points="0,205 100,182 200,159 300,131 400,103 500,75 600,51 700,28" fill="none" stroke="url(#cashflowIncomeLine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+
+                                            <circle cx="200" cy="159" r="4" fill="oklch(0.20 0.012 165)" stroke="oklch(0.82 0.17 165)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                                        </svg>
+
+                                        <div class="cashflow-tooltip">
+                                            <div class="cashflow-tooltip-date">Apr 2023</div>
+                                            <div class="cashflow-tooltip-row">
+                                                <span class="cashflow-tooltip-mark cashflow-tooltip-mark--income"></span>
+                                                <span class="cashflow-tooltip-label">Income</span>
+                                                <span class="cashflow-tooltip-value">$5,540</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cashflow-x-axis">
+                                            <span>Jan</span>
+                                            <span>Feb</span>
+                                            <span class="active">Mar</span>
+                                            <span>Apr</span>
+                                            <span>May</span>
+                                            <span>Jun</span>
+                                            <span>Jul</span>
+                                            <span>Aug</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-content">
+                            <div class="step-number">03</div>
+                            <h3>$SoPU streams in</h3>
+                            <p>Earnings stream for every job processed. Withdraw anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-panel" id="flow-panel-rent" role="tabpanel" aria-labelledby="flow-tab-rent" hidden>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-image step-image--wallet" role="img" aria-label="Solana wallet providers orbiting a central wallet, with $SoPU top-up">
+                            <div class="wallet-orbit" aria-hidden="true">
+                                <div class="wallet-orbit-rings">
+                                    <span class="wallet-orbit-ring wallet-orbit-ring--outer"></span>
+                                    <span class="wallet-orbit-ring wallet-orbit-ring--mid"></span>
+                                    <span class="wallet-orbit-ring wallet-orbit-ring--inner"></span>
+                                </div>
+                                <div class="wallet-orbit-icon wallet-orbit-icon--phantom">
+                                    <img src="assets/Phantom-Integration-Assets.svg" alt="" class="wallet-orbit-svg">
+                                </div>
+                                <div class="wallet-orbit-icon wallet-orbit-icon--solflare">
+                                    <img src="assets/solflare.svg" alt="" class="wallet-orbit-svg">
+                                </div>
+                                <div class="wallet-orbit-icon wallet-orbit-icon--metamask">
+                                    <img src="assets/metamask.svg" alt="" class="wallet-orbit-svg">
+                                </div>
+                                <div class="wallet-orbit-core">
+                                    <svg class="iglyph" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128v288c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h368c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zm352 272c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-content">
+                            <div class="step-number">01</div>
+                            <h3>Connect a wallet</h3>
+                            <p>Phantom or Solflare. Top up with $SoPU.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-image step-image--picker" role="img" aria-label="GPU marketplace card with hardware options and workload templates">
+                            <div class="gpu-picker" aria-hidden="true">
+                                <div class="gpu-picker-card">
+                                    <div class="gpu-picker-head">
+                                        <span class="gpu-picker-title">Available GPUs</span>
+                                        <span class="gpu-picker-badge"><span class="gpu-picker-dot"></span>1,287 live</span>
+                                    </div>
+                                    <ul class="gpu-picker-list">
+                                        <li class="gpu-picker-row is-active">
+                                            <span class="gpu-picker-name">NVIDIA H100 <i>80GB</i></span>
+                                            <span class="gpu-picker-meta">us-west-1</span>
+                                            <span class="gpu-picker-price">$2.19<i>/hr</i></span>
+                                        </li>
+                                        <li class="gpu-picker-row">
+                                            <span class="gpu-picker-name">NVIDIA A100 <i>40GB</i></span>
+                                            <span class="gpu-picker-meta">eu-central-1</span>
+                                            <span class="gpu-picker-price">$1.42<i>/hr</i></span>
+                                        </li>
+                                        <li class="gpu-picker-row">
+                                            <span class="gpu-picker-name">RTX 4090 <i>24GB</i></span>
+                                            <span class="gpu-picker-meta">us-east-1</span>
+                                            <span class="gpu-picker-price">$0.48<i>/hr</i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gpu-picker-templates">
+                                    <span class="gpu-picker-templates-label">Template</span>
+                                    <div class="gpu-picker-chips">
+                                        <span class="gpu-picker-chip is-active">PyTorch</span>
+                                        <span class="gpu-picker-chip">ComfyUI</span>
+                                        <span class="gpu-picker-chip">vLLM</span>
+                                        <span class="gpu-picker-chip">SD XL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-content">
+                            <div class="step-number">02</div>
+                            <h3>Pick a GPU</h3>
+                            <p>Browse the live marketplace. Choose hardware and a workload template.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-image step-image--terminal step-image--ssh" role="img" aria-label="Terminal showing an SSH session opening on a freshly allocated GPU instance">
+                            <div class="terminal-panel" aria-hidden="true">
+                                <div class="terminal-card">
+                                    <div class="terminal-header">
+                                        <span class="terminal-dot terminal-dot--red"></span>
+                                        <span class="terminal-dot terminal-dot--yellow"></span>
+                                        <span class="terminal-dot terminal-dot--green"></span>
+                                        <span class="terminal-title">terminal &mdash; ssh</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <div class="terminal-line">
+                                            <span class="terminal-prompt">$</span>
+                                            <span class="terminal-cmd">ssh ubuntu@gpu-04a2.sopu.compute</span>
+                                        </div>
+                                        <div class="terminal-line terminal-line--output">
+                                            <span class="terminal-output">Allocating <span class="terminal-output-accent">H100 80GB</span> &middot; CUDA 12.4</span>
+                                        </div>
+                                        <div class="terminal-line terminal-line--output">
+                                            <span class="terminal-output">Connected. PyTorch 2.4 ready.</span>
+                                        </div>
+                                        <div class="terminal-line">
+                                            <span class="terminal-prompt">ubuntu@gpu-04a2:~$</span>
+                                            <span class="terminal-cmd terminal-cmd--cursor">_</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="terminal-rate terminal-rate--ssh">
+                                    <div class="terminal-rate-label">
+                                        <span class="terminal-rate-pulse"></span>
+                                        <span>Ready in</span>
+                                    </div>
+                                    <div class="terminal-rate-value">
+                                        <span>00:47</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-content">
+                            <div class="step-number">03</div>
+                            <h3>SSH in under a minute</h3>
+                            <p>Your instance is ready before your coffee is.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1005,6 +1141,48 @@
         } else {
             revealEls.forEach(el => el.classList.add('is-revealed'));
         }
+
+        // Flow tabs — switch between Provide and Rent panels.
+        (function flowTabs() {
+            const tabs = document.querySelectorAll('.flow-tab');
+            const panels = document.querySelectorAll('.flow-panel');
+            if (!tabs.length || !panels.length) return;
+
+            function activate(target, { animate = true } = {}) {
+                tabs.forEach(tab => {
+                    const isActive = tab.dataset.flowTarget === target;
+                    tab.classList.toggle('is-active', isActive);
+                    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    tab.setAttribute('tabindex', isActive ? '0' : '-1');
+                });
+                panels.forEach(panel => {
+                    const isActive = panel.id === `flow-panel-${target}`;
+                    panel.classList.toggle('is-active', isActive);
+                    panel.classList.remove('is-switching-in');
+                    if (isActive) {
+                        panel.removeAttribute('hidden');
+                        if (animate) {
+                            // Restart animation by toggling class on next frame.
+                            requestAnimationFrame(() => panel.classList.add('is-switching-in'));
+                        }
+                    } else {
+                        panel.setAttribute('hidden', '');
+                    }
+                });
+            }
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => activate(tab.dataset.flowTarget));
+                tab.addEventListener('keydown', (e) => {
+                    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+                    e.preventDefault();
+                    const dir = e.key === 'ArrowRight' ? 1 : -1;
+                    const next = tabs[(index + dir + tabs.length) % tabs.length];
+                    next.focus();
+                    activate(next.dataset.flowTarget);
+                });
+            });
+        })();
 
         // Off-screen ambient pause — CPU/GPU sleeps when these blocks aren't on screen.
         // CSS handles the actual animation-play-state via .is-offscreen rules.

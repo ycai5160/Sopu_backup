@@ -2006,6 +2006,357 @@ section { position: relative; }
     font-variant-numeric: tabular-nums;
 }
 
+/* Flow tabs — Provide / Rent */
+.flow-tabs {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto clamp(2rem, 1.25rem + 2vw, 3rem);
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    isolation: isolate;
+}
+
+.flow-tab {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 5px;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    color: var(--ink-55);
+    cursor: pointer;
+    transition: color 200ms ease;
+    text-align: center;
+    min-width: clamp(11rem, 8rem + 12vw, 15rem);
+}
+
+.flow-tab:hover { color: var(--ink-90); }
+
+.flow-tab.is-active {
+    color: var(--ink-100);
+}
+
+.flow-tab-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: inherit;
+    opacity: 0.55;
+    line-height: 1;
+}
+
+.flow-tab.is-active .flow-tab-eyebrow {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.flow-tab-label {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.flow-tabs-indicator {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.flow-tabs:has(.flow-tab:nth-child(2).is-active) .flow-tabs-indicator {
+    transform: translateX(100%);
+}
+
+.flow-tab:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.flow-panel {
+    display: block;
+}
+
+.flow-panel[hidden] {
+    display: none;
+}
+
+.flow-panel.is-switching-in .steps-grid > .step-item {
+    animation: flow-panel-step-in 480ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.flow-panel.is-switching-in .steps-grid > .step-item:nth-child(2) { animation-delay: 70ms; }
+.flow-panel.is-switching-in .steps-grid > .step-item:nth-child(3) { animation-delay: 140ms; }
+
+@keyframes flow-panel-step-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flow-tabs-indicator { transition: none; }
+    .flow-panel.is-switching-in .steps-grid > .step-item { animation: none; }
+}
+
+/* Rent · Step 02 — GPU picker */
+.step-image--picker {
+    display: block;
+    padding: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+    container-type: inline-size;
+}
+
+.gpu-picker {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2cqi;
+}
+
+.gpu-picker,
+.gpu-picker * {
+    font-family: var(--font-sans);
+}
+
+.gpu-picker-card {
+    flex: 1 1 auto;
+    background: #0e0e11;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.3cqi;
+    box-shadow: 0 8cqi 16cqi -4cqi rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    position: relative;
+}
+
+.gpu-picker-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: radial-gradient(ellipse 60% 100% at 50% 50%,
+        oklch(0.88 0.005 165 / 0.95) 0%,
+        oklch(0.88 0.005 165 / 0.3) 35%,
+        transparent 70%);
+    pointer-events: none;
+}
+
+.gpu-picker-head {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.4cqi 3.9cqi;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gpu-picker-title {
+    font-size: 2.6cqi;
+    font-weight: 600;
+    color: var(--ink-100);
+    letter-spacing: -0.01em;
+    line-height: 1;
+}
+
+.gpu-picker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.4cqi;
+    font-family: var(--font-mono);
+    font-size: 2cqi;
+    color: var(--ink-55);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.gpu-picker-dot {
+    width: 1.5cqi;
+    height: 1.5cqi;
+    border-radius: 999px;
+    background: #00bc7d;
+    box-shadow: 0 0 1.6cqi #10b981;
+}
+
+.gpu-picker-list {
+    list-style: none;
+    margin: 0;
+    padding: 1.6cqi;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2cqi;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.gpu-picker-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    column-gap: 3.2cqi;
+    align-items: center;
+    padding: 2.4cqi 2.8cqi;
+    border-radius: 1cqi;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.015);
+    color: var(--ink-70);
+    font-size: 2.4cqi;
+    line-height: 1;
+    transition: background 200ms ease;
+}
+
+.gpu-picker-row.is-active {
+    background: rgba(44, 225, 171, 0.08);
+    border-color: rgba(44, 225, 171, 0.35);
+    color: var(--ink-100);
+    box-shadow: 0 0 0 1px rgba(44, 225, 171, 0.18) inset;
+}
+
+.gpu-picker-name {
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: var(--ink-100);
+}
+
+.gpu-picker-name i {
+    font-style: normal;
+    color: var(--ink-55);
+    font-weight: 400;
+    margin-left: 0.6cqi;
+}
+
+.gpu-picker-meta {
+    font-family: var(--font-mono);
+    font-size: 2cqi;
+    color: var(--ink-40);
+    letter-spacing: 0.04em;
+}
+
+.gpu-picker-price {
+    font-family: var(--font-mono);
+    font-size: 2.4cqi;
+    color: var(--ink-100);
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+}
+
+.gpu-picker-row.is-active .gpu-picker-price {
+    color: oklch(0.86 0.18 165);
+}
+
+.gpu-picker-price i {
+    font-style: normal;
+    color: var(--ink-40);
+    font-weight: 400;
+    margin-left: 0.4cqi;
+}
+
+.gpu-picker-templates {
+    flex: 0 0 auto;
+    background: #1c1c22;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.3cqi;
+    padding: 2.4cqi 3cqi;
+    display: flex;
+    align-items: center;
+    gap: 2.4cqi;
+}
+
+.gpu-picker-templates-label {
+    font-family: var(--font-mono);
+    font-size: 2cqi;
+    color: var(--ink-55);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    flex: 0 0 auto;
+}
+
+.gpu-picker-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4cqi;
+}
+
+.gpu-picker-chip {
+    font-size: 2.2cqi;
+    line-height: 1;
+    padding: 1.6cqi 2.2cqi;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--ink-70);
+}
+
+.gpu-picker-chip.is-active {
+    background: rgba(44, 225, 171, 0.12);
+    border-color: rgba(44, 225, 171, 0.4);
+    color: oklch(0.92 0.18 165);
+}
+
+/* Rent · Step 03 — SSH terminal variant */
+.step-image--ssh .terminal-cmd--cursor {
+    color: oklch(0.86 0.18 165);
+    animation: ssh-cursor-blink 1s steps(2, end) infinite;
+}
+
+@keyframes ssh-cursor-blink {
+    50% { opacity: 0; }
+}
+
+.terminal-rate--ssh .terminal-rate-label {
+    color: var(--ink-55);
+}
+
+.terminal-rate--ssh .terminal-rate-value {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    color: oklch(0.86 0.18 165);
+}
+
+.terminal-rate--ssh .terminal-rate-pulse {
+    animation: ssh-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes ssh-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(0.85); }
+}
+
+@media (max-width: 540px) {
+    .flow-tab {
+        min-width: 0;
+        padding: 0.55rem 1rem;
+    }
+    .flow-tab-label { font-size: 0.9375rem; }
+}
+
 /* =================================================================
    Token section (.what-you-get)
    Three benefit cards as wide ledger rows. Definition lists.
